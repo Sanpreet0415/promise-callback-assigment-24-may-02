@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let number=[15,1,4,2,6,7,6,8];
+    function filterArray(arr,callback){
+        let add=[];
+        for(let i=0;i<arr.length;i++){
+            if(callback(arr[i])){
+                add.push(arr[i]);
+            }
+        }
+        return add;
+    }
+    function even(ele){
+        return ele%2 === 0;
+    }
+    let check = filterArray(number,even);
+
+    console.log("original array" , number);
+    console.log("filter array:" , check);
+</script>
+</html>
